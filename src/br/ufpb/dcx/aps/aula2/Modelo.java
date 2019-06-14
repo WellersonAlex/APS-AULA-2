@@ -31,6 +31,11 @@ public class Modelo {
 		return "Modelo [nome=" + nome + ", " + marca + "]";
 	}
 	
+	public int quantModelosDeUmaMarca() {
+		
+		return 0;
+	}
+	
 	
 
 }
