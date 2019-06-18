@@ -1,13 +1,19 @@
 package br.ufpb.dcx.aps.aula2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Modelo {
 	
 	private String nome;
 	private Marca marca;
 	
+	private List<Veiculo> veiculos = new ArrayList<Veiculo>();
+	
 	public Modelo(String nome, Marca marca) {
 		this.nome = nome;
 		this.marca = marca;
+		marca.addModelo(this);
 	}
 
 	public String getNome() {
@@ -31,11 +37,13 @@ public class Modelo {
 		return "Modelo [nome=" + nome + ", " + marca + "]";
 	}
 	
-	public int quantModelosDeUmaMarca() {
-		
-		return 0;
+
+	public int getQunatidadeVeiculos() {
+		return veiculos.size();
 	}
-	
-	
+
+	public void addVeiculo(Veiculo veiculo) {
+		this.veiculos.add(veiculo);
+	}
 
 }

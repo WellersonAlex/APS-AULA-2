@@ -8,7 +8,7 @@ public class GenericService<T> {
 	protected int proximoId = 1;
 	
 	protected Map<Integer, T> itens = new HashMap<Integer, T>();
-	
+
 	public T get(int id) {
 		return this.itens.get(id);
 	}
@@ -17,5 +17,9 @@ public class GenericService<T> {
 		this.itens.put(proximoId, t);
 		return proximoId++;
 		
+	}
+	
+	public int getQuantidade() {
+		return itens.size();
 	}
 }

@@ -10,6 +10,7 @@ public class Veiculo {
 		this.cor = cor;
 		this.ano = ano;
 		this.modelo = modelo;
+		this.modelo.addVeiculo(this);
 	}
 
 	public String getCor() {
